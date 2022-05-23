@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <title>LOGO - the AgroApp</title>
+</head>
+
+
+<body>
+    <div class="headbar" id="headbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo picture showing letters 'LO' above 'GO' in square">
+        <div class="menubar">
+            {% block menubarblock %}{% endblock %}
+        </div>
+    </div>
+    <div class="leftbar">
+        {% block leftbarblock %}{% endblock %}
+    </div>
+    <div class="contentbar">
+        {% block contentbarblock %}{% endblock %}
+    </div>
+    <div class="rightbar">
+        {% block rightbarblock %}{% endblock %}
+    </div>
+    <div class="footbar">
+        {% block footbarblock %}{% endblock %}
+    </div>
+</body>
+
+</html>

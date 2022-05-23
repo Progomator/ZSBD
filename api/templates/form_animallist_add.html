@@ -1,0 +1,6 @@
+<form method="post" actions="{{url_for('animallist_add')}}">
+    {{ form.csrf_token }}
+    {{form.animalType.label}} {{form.animalType}}
+    <input type="submit" onclick="redirect_to_source('/animallist/add')"> 
+    <input type="button" value="Anuluj" onclick="redirect_to_source('/animallist/add')"> 
+</form>

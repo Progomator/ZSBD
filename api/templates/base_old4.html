@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon.ico') }}">
+    <script type="text/javascript" src="{{ url_for('static', filename='scripts.js') }}"></script>
+    <title>LOGO - the AgroApp</title>
+</head>
+
+
+<body>
+    <div class="headbar" id="headbar">
+        <img src="{{ url_for('static', filename='logo.png') }}" alt="Logo picture showing letters 'LO' above 'GO' in square">
+        <div class="menubar">
+            <a href="">Start</a>
+            <a href="">Grunty</a>
+            <a class="active" href="">Budynki</a>
+            <a href="">Zwierzęta</a>
+            <a href="">Maszyny</a>
+            <a href="">Ochrona roślin</a>
+            <a href="">Utrzymanie zwierząt</a>
+            <a href="">Ekonomia</a>
+        </div>
+    </div>
+    <div class="leftbar">
+        <a href="">Option1</a>
+        <a href="">Option1</a>
+        <a href="">Option1</a>
+        <a href="">Option1</a>
+
+     
+
+    </div>
+    <div class="contentbar">
+        <form name="" method="post">
+            <label for="1">Labelka</label>
+            <input id="1" placeholder="Podaj liczbę towarów" type="text">
+            <label for="2">Labelka2</label>
+            <input id="2" placeholder="Podaj liczbę towarów" type="text">
+            <div class="in-contentbar-btns">
+                <input id="submit1" type="submit" value="Zatwierdź">
+                <input id="button1" type="button" value="Anuluj">
+            </div>
+        </form>
+
+        {% block xyz %}
+        {% endblock %}
+    </div>
+    <div class="rightbar">
+        
+    </div>
+    <div class="footbar">
+
+    </div>
+</body>
+
+</html>

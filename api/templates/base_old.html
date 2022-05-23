@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+
+    <head>
+        <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+        <meta charset="UTF-8" lang="pl">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="description" content="ERP Application for agriculture.">
+        <title>Agro-app</title>
+    </head>
+
+
+    <body background="{{ url_for('static', filename='background.png') }}">
+        <div id="main-container">
+            <div id="logo">
+                <img src="{{ url_for('static', filename='logo.png') }}" alt="Ikona aplikacji">
+            </div>
+            <div id="top1-container">
+            </div>
+            <div id=next-section>
+            </div>
+            <div id=top2-container>
+            </div>
+            <div id=left-nav-container>
+                {% block left_nav_container %}{% endblock %}
+            </div>
+            <div id="middle-strip">
+            </div>
+            <div id=content-container>
+                {% block content_container %}{% endblock%}
+            </div>
+            <div id=next-section>
+            </div>
+        </div>
+    </body>
+
+
+</html>

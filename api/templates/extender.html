@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block xyz %}
+    {% for choice in choices %}
+        <b>{{choice.animalType}}</b>
+    {% endfor %}
+{% endblock %}

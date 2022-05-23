@@ -1,0 +1,395 @@
+@font-face
+{
+	font-family: myFirstFont;
+	src: url("font.ttf");
+}
+ /* 
+ ##################################
+ Headbar
+ ##################################
+ */
+.headbar
+{
+    align-items: center;
+	width: 100%;
+	height: 44px;
+	background: rgb(0, 0, 0);
+	padding: 0px;
+	border: 0px;
+	margin: 0px;
+    overflow: hidden;
+    position: sticky;
+}
+.headbar img
+{
+    float: left;
+	width: 44px;
+	height: 44px;
+	padding: 0px;
+	border: 0px;
+	margin: 0px 0px 0px 0px;	
+}
+.headbar a
+{
+    margin: 0px 0px 0px 0px;
+    padding: 12px 18px 12px 18px;
+    color: white;
+    text-decoration: none;
+    letter-spacing: 2px;
+}
+.headbar a:hover
+{
+    color: white;
+    background-color: grey;
+    transition: background-color 0.5s;
+}
+.headbar a:active
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(157, 255, 0);
+    transition: background-color 0.7s;
+}
+.headbar .menubar .active
+{
+    color: rgb(0, 0, 0);
+    background-color: rgb(157, 255, 0);
+}
+ /* 
+ ##################################
+ Menubar
+ ##################################
+ */
+ .menubar
+ {
+     /* width: 94%; */
+     float: left;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+ /* 
+ ##################################
+ Rigtbar
+ ##################################
+ */
+.leftbar
+{   
+    float: left;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    width: 13%;
+    height: 709px;
+    padding: 0px;
+	border: 0px;
+	margin: 0px;
+    background-color: rgb(34, 34, 34);
+    overflow-y: scroll;
+
+    scrollbar-width: none;
+    scrollbar-track-color: rgba(0, 0, 0, 0);
+    scrollbar-shadow-color: rgba(0, 0, 0, 0);
+    scrollbar-base-color: rgba(0, 0, 0, 0);
+    scroll-behavior: smooth;
+}
+.leftbar::-webkit-scrollbar, .leftbar::-webkit-scrollbar
+{
+    width: 6px;
+}
+.leftbar::-webkit-scrollbar-track 
+{
+    border-left: 0px solid #000;
+}
+.leftbar::-webkit-scrollbar-thumb 
+{
+    background: #0000004d;
+}
+.leftbar::-webkit-scrollbar-thumb:hover 
+{
+    background: #000000;
+}
+.leftbar::-webkit-scrollbar-thumb:window-inactive 
+{
+    background: #696969;
+} 
+.leftbar a 
+{
+    
+    display: block;
+    width: 100%;
+    height: 40px;
+    color:rgb(184, 184, 184);
+    text-decoration: none;
+    width: 20px;
+    height: 32px;
+    margin: 0px 0px 0px 0px;
+    padding: 8px 247px 0px 4px;
+    border-top: solid 2px rgba(0, 0, 0, 0);
+    border-bottom: solid 2px rgba(0, 0, 0, 0);
+}
+.leftbar a:hover
+{
+    display: both;
+    color:rgb(184, 184, 184);
+    background-color:rgb(117, 117, 117);
+    transition: background-color 0.5s;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;
+}
+.leftbar a:active
+{
+    display: both;
+    color:rgb(10, 10, 10);
+    background-color:rgb(157, 255, 0);
+    transition: background-color 0.7s;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;    
+}
+.leftbar a .active
+{
+    display: both;
+    color:rgb(10, 10, 10);
+    background-color:rgb(157, 255, 0);
+    transition: background-color 0.7s;
+    border-top: solid 2px black;
+    border-bottom: solid 2px black;    
+}
+body 
+{
+	font-family: myFirstFont;
+    background-color: rgb(216, 158, 158);
+	width: 100%;
+    padding: 0px;
+	border: 0px;
+	margin: 0px;
+}
+ /* 
+ ##################################
+ Rigtbar
+ ##################################
+ */
+ .rightbar
+ {
+    float: left;
+    display: flex;
+    flex-direction: column;
+    width: 13%;
+    height: 709px;
+    padding: 0px;
+	border: 0px;
+	margin: 0px;
+    background-color: rgb(34, 34, 34);
+    overflow-y: scroll;
+
+    scrollbar-width: none;
+    scrollbar-track-color: rgba(0, 0, 0, 0);
+    scrollbar-shadow-color: rgba(0, 0, 0, 0);
+    scrollbar-base-color: rgba(0, 0, 0, 0);
+    scroll-behavior: smooth;
+
+ }
+.rightbar::-webkit-scrollbar, .leftbar::-webkit-scrollbar
+{
+    width: 0px;
+}
+.rightbar::-webkit-scrollbar-track 
+{
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    width: 0px;
+}
+.rightbar::-webkit-scrollbar-thumb 
+{
+    background: #00000000;
+    width: 0px;
+}
+.rightbar::-webkit-scrollbar-thumb:hover 
+{
+    background: #00000000;
+    width: 0px;
+}
+.rightbar::-webkit-scrollbar-thumb:window-inactive 
+{
+    background: #69696900;
+    width: 0px;
+}
+ /* 
+ ##################################
+ Contentbar
+ ##################################
+ */
+.contentbar
+{  
+    float: left;
+    font-size: 25px;
+    display: flex;
+    overflow: scroll;
+    width: 74%;
+    height: 709px;
+    padding: 0px;
+	border: 0px;
+	margin: 0px;
+    background-color: brown;
+	background-image: url("{{ url_for('static', filename='background.png') }}") no-repeat 85% 100%;
+    background: url("background.png") no-repeat 85% 100%;
+
+    scrollbar-width: none;
+    scrollbar-track-color: rgba(0, 0, 0, 0);
+    scrollbar-shadow-color: rgba(0, 0, 0, 0);
+    scrollbar-base-color: rgba(0, 0, 0, 0);
+    scroll-behavior: smooth;
+}
+.contentbar form
+{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+.contentbar form input
+{
+    font-family: myFirstFont;
+    letter-spacing: 1px;
+    color:rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.808);
+    height: 26px;
+    width: 690px;
+    box-shadow: 0px 0px 30px 15px rgba(227, 250, 213, 0.884);
+    margin: 0px 0px 0px 180px;
+    border:2px solid black;
+    border-radius: 20px;
+    padding: 0px 0px 0px 12px;
+    outline-color: rgb(116, 201, 31);
+}
+select
+{
+    font-family: myFirstFont;
+    letter-spacing: 1px;
+    color:rgb(0, 0, 0);
+    background-color: rgba(255, 255, 255, 0.808);
+    height: 26px;
+    width: 690px;
+    box-shadow: 0px 0px 30px 15px rgba(227, 250, 213, 0.884);
+    margin: 0px 0px 0px 180px;
+    border:2px solid black;
+    border-radius: 20px;
+    padding: 0px 0px 0px 12px;
+    outline-color: rgb(116, 201, 31);
+}
+.contentbar form input:focus
+{
+    background-color: rgb(217, 250, 202);
+}
+.contentbar form input:hover
+{
+    background-color: rgb(217, 250, 202);
+    transition: background-color 0.5s;
+}
+.contentbar label
+{
+    z-index: 1;
+    font-family: myFirstFont;
+    font-size: 16px;
+    padding: 0px 0px 0px 0px;
+    margin: 40px 0px 0px 193px;
+}
+.contentbar input[type="button"],
+.contentbar input[type="submit"]
+{
+    height: 30px;
+    width: 150px;
+    font-size: 16px;
+    margin: 30px 0px 0px 0px;
+}
+.in-contentbar-btns
+{
+    display: block;
+    height: 40px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+.contentbar input[type="button"]
+{
+    margin-left: 40px;
+    background-color: rgb(238, 89, 63);
+    text-align: center;
+    padding: 1px 0px 0px 5px;
+    border-color: darkred;
+}
+.contentbar input[type="button"]:hover
+{
+    background-color: rgb(223, 0, 0);
+    transition: background-color 0.5s;
+}
+.contentbar input[type="submit"]
+{
+    margin-left: 360px;
+    background-color: rgb(177, 235, 62);
+    text-align: center;
+    padding: 1px 0px 0px 5px;
+    border-color: green;
+}
+.contentbar input[type="submit"]:hover
+{
+    background-color: rgb(73, 199, 0);
+    transition: background-color 0.5s;
+}
+.contentbar::-webkit-scrollbar, .leftbar::-webkit-scrollbar
+{
+    width: 0px;
+}
+.contentbar::-webkit-scrollbar-track 
+{
+    border-left: 0px solid rgba(0, 0, 0, 0);
+    width: 0px;
+}
+.contentbar::-webkit-scrollbar-thumb 
+{
+    background: #00000000;
+    width: 0px;
+}
+.contentbar::-webkit-scrollbar-thumb:hover 
+{
+    background: #00000000;
+    width: 0px;
+}
+.contentbar::-webkit-scrollbar-thumb:window-inactive 
+{
+    background: #69696900;
+    width: 0px;
+}
+ /* 
+ ##################################
+ Footbar
+ ##################################
+ */
+.footbar
+{
+    clear: both;
+    width: 100%;
+    height: 44px;
+    background-color: black;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* The sticky class is added to the navbar with JS when it reaches its scroll position */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }  

@@ -1,0 +1,7 @@
+{% for  item in menu %}
+    {% if item == active_item["headbar_active"] %}
+        <a class="active" href="{{ url_for(menu[item][0]) }}">{{ item }}</a>
+    {% else %}
+        <a href="{{ url_for(menu[item][0]) }}">{{ item }}</a>
+    {% endif %}
+{% endfor %}
